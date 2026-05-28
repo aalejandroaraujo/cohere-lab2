@@ -1,0 +1,1073 @@
+[
+  {
+    "id": "DOC-0001",
+    "title": "Session invalidation following credential updates",
+    "category": "Authentication",
+    "content": "When a user updates their credentials, all active sessions tied to the previous credentials are terminated for security. Users must re-authenticate with the new credentials. If the login screen rejects valid new credentials, clear cached tokens in the browser and retry. Token refresh can lag by up to 60 seconds after a change.",
+    "type": "article"
+  },
+  {
+    "id": "DOC-0002",
+    "title": "Resetting your API key",
+    "category": "Authentication",
+    "content": "If your API key stops working, regenerate it from the dashboard under Settings, API Keys. The old key is revoked immediately. Update any stored copies of the key in your environment variables and CI secrets after regenerating.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0003",
+    "title": "Password requirements during signup",
+    "category": "Account",
+    "content": "New passwords must be at least 12 characters and include a number and a symbol. During signup, the form validates the password in real time. Passwords cannot reuse any of your last five passwords.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0004",
+    "title": "Changing your account email address",
+    "category": "Account",
+    "content": "To change the email on your account, go to Settings, Profile. A confirmation link is sent to the new address. Until you confirm, login continues to use the old email.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0005",
+    "title": "Two-factor authentication setup",
+    "category": "Authentication",
+    "content": "Enable two-factor authentication from Settings, Security. Scan the QR code with an authenticator app. Keep your backup codes safe; you will need one if you change your password and lose your device.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0006",
+    "title": "Why charges can exceed your plan total",
+    "category": "Billing",
+    "content": "Amounts beyond your plan's included allowance accrue as metered overage and settle at cycle close. A frequent driver is background retries or automated jobs consuming more calls than anticipated. Open the usage breakdown by service to identify which component drove the increase, and configure a spend alert to get warned earlier next cycle.",
+    "type": "article"
+  },
+  {
+    "id": "DOC-0007",
+    "title": "Why your monthly invoice may look different",
+    "category": "Billing",
+    "content": "Your monthly invoice can look different from last month after you change your payment method. Add or change a card under Settings, Billing, Payment Methods; the new card becomes the default for the next bill. A small temporary authorization may appear.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0008",
+    "title": "Downloading past invoices",
+    "category": "Billing",
+    "content": "All invoices are available under Settings, Billing, Invoices. Click any invoice to download a PDF. Invoices older than 24 months are archived but can be requested from support.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0009",
+    "title": "What to expect on your bill after changing plans this month",
+    "category": "Billing",
+    "content": "If you changed plans this month, expect your bill to reflect a prorated adjustment. Upgrades are billed immediately and prorated; downgrades apply next cycle. The expected amount appears on the Plan page before you confirm.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0010",
+    "title": "Applying a discount or promo code",
+    "category": "Billing",
+    "content": "Enter promo codes at checkout or under Settings, Billing, Promotions. Codes apply to the next invoice and cannot be combined with other offers.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0011",
+    "title": "Rollouts blocked by insufficient compute quota",
+    "category": "Deployments",
+    "content": "A deployment that repeatedly does not complete is often blocked by insufficient compute quota in the target region. The rollout waits for capacity and eventually times out. Check your regional quota under Settings, Quotas, and either request an increase or deploy to a region with available capacity. Logs will show a pending-capacity state rather than a code error.",
+    "type": "article"
+  },
+  {
+    "id": "DOC-0012",
+    "title": "Configuring a custom domain",
+    "category": "Deployments",
+    "content": "To map a custom domain to your deployment, add a CNAME record pointing to the provided endpoint, then verify ownership in Settings, Domains. Propagation can take up to an hour.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0013",
+    "title": "Rolling back to a previous deployment",
+    "category": "Deployments",
+    "content": "Each deployment is versioned. To roll back, open the Deployments tab, select a prior successful version, and click Promote. Rollbacks are near-instant and do not rebuild.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0014",
+    "title": "Setting environment variables for a deployment",
+    "category": "Deployments",
+    "content": "Define environment variables under the deployment's Configuration tab. Changes trigger a new rollout. Secrets should be stored as protected variables, not plain text.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0015",
+    "title": "Deployment notifications and webhooks",
+    "category": "Deployments",
+    "content": "Configure webhooks to receive deployment status events. Add a webhook URL under Settings, Integrations. Events include started, succeeded, and failed.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0016",
+    "title": "Retrieving a complete copy of your stored records",
+    "category": "Data",
+    "content": "To obtain everything stored under your account, start a bulk archive job from Settings, Data, Export. The platform packages your records into a downloadable bundle and emails a secure link when ready. Large accounts can take several hours; the link expires in 72 hours.",
+    "type": "article"
+  },
+  {
+    "id": "DOC-0017",
+    "title": "Getting data into the platform from a CSV",
+    "category": "Data",
+    "content": "To get data into the platform, use the Import wizard under Data, Import to upload a CSV file. Map your columns to platform fields. The first row is treated as headers. Files over 10MB are processed in the background.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0018",
+    "title": "Data retention and deletion policy",
+    "category": "Data",
+    "content": "Deleted records are retained in a recoverable state for 30 days, then permanently removed. You can request immediate permanent deletion for compliance reasons via support.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0019",
+    "title": "Moving platform data out to an external warehouse",
+    "category": "Data",
+    "content": "Stream your platform data out to an external data warehouse by configuring a connector under Integrations. Supported targets include common cloud warehouses. The sync that moves data out runs on a schedule you define.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0020",
+    "title": "Responding to throttled requests with backoff",
+    "category": "API",
+    "content": "When requests arrive faster than the allowed pace, the service returns a throttled response with a Retry-After hint. Clients should slow down and back off progressively rather than retrying at once. Parallel bursts are the usual trigger. Spread the load or move to a higher throughput tier for sustained needs.",
+    "type": "article"
+  },
+  {
+    "id": "DOC-0021",
+    "title": "What a 401 error means (not a rate limit)",
+    "category": "API",
+    "content": "A 401 error means credentials are missing or invalid. It is an authentication error, not a rate limit, and is unrelated to how many requests you send. Confirm the Authorization header and that the key is still valid.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0022",
+    "title": "Reading API error codes and limits",
+    "category": "API",
+    "content": "The API uses standard error codes. A 429 indicates too many requests against your rate limit; 400 is a bad request; 401 is auth; 500 is a server error. Each error response includes a type you can branch on.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0023",
+    "title": "Pagination for large result sets",
+    "category": "API",
+    "content": "List endpoints return results in pages. Use the cursor in the response to fetch the next page. Page size can be set up to a maximum of 100 items per request.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0024",
+    "title": "Webhook delivery retries",
+    "category": "API",
+    "content": "If your endpoint does not return a 200, the platform retries webhook delivery with increasing delays over 24 hours. After that, the event is dropped and logged.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0025",
+    "title": "Inviting team members to your workspace",
+    "category": "Account",
+    "content": "Invite teammates from Settings, Team. Enter their email and assign a role. They receive an invitation link valid for seven days.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0026",
+    "title": "Roles and permissions overview",
+    "category": "Account",
+    "content": "Roles include Owner, Admin, Developer, and Viewer. Owners manage billing; Admins manage members; Developers deploy; Viewers have read-only access.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0027",
+    "title": "Transferring workspace ownership",
+    "category": "Account",
+    "content": "Owners can transfer ownership under Settings, Team. The new owner must already be an Admin. Billing responsibility transfers with ownership.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0028",
+    "title": "Deleting your account",
+    "category": "Account",
+    "content": "Account deletion is permanent. Cancel active subscriptions first. Export any data you wish to keep before deleting, as recovery is not possible afterward.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0029",
+    "title": "Single sign-on with SAML",
+    "category": "Authentication",
+    "content": "Configure SAML SSO under Settings, Security. Provide your identity provider metadata URL. Once enabled, members sign in through your IdP.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0030",
+    "title": "Managing active sessions",
+    "category": "Authentication",
+    "content": "View and revoke active sessions under Settings, Security, Sessions. Revoking a session forces that device to sign in again.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0031",
+    "title": "Recovering a locked account",
+    "category": "Authentication",
+    "content": "Accounts lock after repeated failed sign-ins. Wait 15 minutes or use the account recovery email link to unlock immediately.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0032",
+    "title": "Service status and uptime",
+    "category": "Operations",
+    "content": "Check live service status at the status page. Subscribe to incident notifications to receive updates during outages.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0033",
+    "title": "Scheduled maintenance windows",
+    "category": "Operations",
+    "content": "Maintenance is announced at least 72 hours in advance on the status page. Brief degradation may occur during the window.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0034",
+    "title": "Regions and data residency",
+    "category": "Operations",
+    "content": "Choose your data region at workspace creation. Data stays in the selected region. Region cannot be changed after creation without a migration request.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0035",
+    "title": "Configuring logging and audit trails",
+    "category": "Operations",
+    "content": "Enable audit logging under Settings, Security. Logs capture sign-ins, configuration changes, and deployments, retained for 90 days.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0036",
+    "title": "Monitoring resource usage",
+    "category": "Operations",
+    "content": "The Usage dashboard shows calls, storage, and compute over time. Filter by service and date range to spot trends.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0037",
+    "title": "Setting up alerts and notifications",
+    "category": "Operations",
+    "content": "Create alerts under Settings, Alerts for thresholds on usage, errors, or spend. Alerts can notify by email or webhook.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0038",
+    "title": "Using the command line interface",
+    "category": "Developer",
+    "content": "Install the CLI with the package manager for your OS. Authenticate with a personal access token. Run the help command to list available operations.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0039",
+    "title": "Generating a personal access token",
+    "category": "Developer",
+    "content": "Create tokens under Settings, Tokens. Scope each token to the minimum permissions needed. Tokens can be set to expire automatically.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0040",
+    "title": "SDK installation and quickstart",
+    "category": "Developer",
+    "content": "Official SDKs are available for several languages. Install via your package manager and initialize the client with your endpoint and key.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0041",
+    "title": "Sandbox and test environments",
+    "category": "Developer",
+    "content": "Each workspace includes a sandbox for testing. Sandbox data is isolated from production and reset weekly.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0042",
+    "title": "Versioning your API integrations",
+    "category": "Developer",
+    "content": "Pin to a specific API version via the version header. Unpinned clients use the latest stable version, which may introduce changes.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0043",
+    "title": "Configuring CORS for browser clients",
+    "category": "Developer",
+    "content": "Add allowed origins under Settings, API, CORS. Requests from unlisted origins are rejected by the browser.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0044",
+    "title": "Uploading and managing files",
+    "category": "Data",
+    "content": "Upload files through the dashboard or API. Files are scanned and stored encrypted. Maximum single-file size is 100MB.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0045",
+    "title": "Searching and filtering records",
+    "category": "Data",
+    "content": "Use the search bar with field filters to narrow records. Saved filters can be reused and shared with your team.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0046",
+    "title": "Backing up your configuration",
+    "category": "Data",
+    "content": "Export your workspace configuration as a file under Settings, Export. Use it to recreate settings in another workspace.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0047",
+    "title": "Bulk editing records",
+    "category": "Data",
+    "content": "Select multiple records and choose a bulk action to update them at once. Bulk changes are logged in the audit trail.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0048",
+    "title": "Archiving inactive records",
+    "category": "Data",
+    "content": "Archive records to keep your active views clean. Archived records are excluded from search by default but remain retrievable.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0049",
+    "title": "Connecting to third-party integrations",
+    "category": "Integrations",
+    "content": "Browse available integrations in the Marketplace. Authorize each integration with the scopes it requests. Revoke access anytime under Integrations.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0050",
+    "title": "Building a custom integration",
+    "category": "Integrations",
+    "content": "Use webhooks and the API to build custom integrations. Register your integration and request the scopes it needs.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0051",
+    "title": "Troubleshooting a failed integration sync",
+    "category": "Integrations",
+    "content": "If a sync fails, check the integration's log under Integrations, Activity. Common causes are expired credentials and changed permissions.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0052",
+    "title": "Notification preferences",
+    "category": "Account",
+    "content": "Control which emails you receive under Settings, Notifications. Options include product updates, security alerts, and billing notices.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0053",
+    "title": "Customizing your dashboard",
+    "category": "Account",
+    "content": "Rearrange widgets on your dashboard by dragging them. Save multiple layouts and switch between them.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0054",
+    "title": "Mobile app overview",
+    "category": "Account",
+    "content": "The mobile app provides read access and alert notifications. Sign in with the same credentials as the web app.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0055",
+    "title": "Exporting reports as PDF",
+    "category": "Data",
+    "content": "Generate a report and choose Export, PDF. Reports include the filters applied at generation time.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0056",
+    "title": "Scheduling recurring reports",
+    "category": "Data",
+    "content": "Set a report to run on a schedule under Reports, Schedule. Scheduled reports are emailed to chosen recipients.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0057",
+    "title": "Understanding your usage quota",
+    "category": "Billing",
+    "content": "Each plan includes a monthly quota per service. Quota resets at the start of each billing cycle. Track consumption on the Usage dashboard.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0058",
+    "title": "Setting a spending limit",
+    "category": "Billing",
+    "content": "Define a hard or soft spending limit under Settings, Billing, Limits. A hard limit pauses service; a soft limit only alerts.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0059",
+    "title": "Tax and VAT on invoices",
+    "category": "Billing",
+    "content": "Add your tax or VAT ID under Settings, Billing. Valid IDs are reflected on future invoices according to local rules.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0060",
+    "title": "Annual versus monthly billing",
+    "category": "Billing",
+    "content": "Annual billing offers a discount over monthly. Switch under Settings, Billing, Plan. Switching to annual charges the year upfront.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0061",
+    "title": "Refund policy",
+    "category": "Billing",
+    "content": "Refunds are considered within 14 days of a charge for unused service. Contact support with the invoice number to request one.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0062",
+    "title": "Configuring auto-scaling",
+    "category": "Deployments",
+    "content": "Enable auto-scaling to adjust capacity with demand. Set minimum and maximum instances under the deployment's Scaling tab.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0063",
+    "title": "Health checks and readiness probes",
+    "category": "Deployments",
+    "content": "Define a health check path so the platform routes traffic only to healthy instances. Failing probes are restarted automatically.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0064",
+    "title": "Blue-green deployment strategy",
+    "category": "Deployments",
+    "content": "Deploy a new version alongside the old, then switch traffic once verified. This minimizes downtime and eases rollback.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0065",
+    "title": "Viewing deployment logs",
+    "category": "Deployments",
+    "content": "Stream logs from the Deployments, Logs tab. Filter by severity and time. Logs are retained for 14 days.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0066",
+    "title": "Securing secrets and credentials",
+    "category": "Developer",
+    "content": "Store secrets as protected variables. They are encrypted at rest and masked in logs. Never commit secrets to source control.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0067",
+    "title": "Rate tiers and throughput limits",
+    "category": "API",
+    "content": "Each plan has a requests-per-second tier. Higher tiers are available on request. The Usage dashboard shows your current rate.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0068",
+    "title": "Idempotency keys for safe retries",
+    "category": "API",
+    "content": "Include an idempotency key on write requests so retries do not create duplicates. Keys are honored for 24 hours.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0069",
+    "title": "Filtering API responses with field selection",
+    "category": "API",
+    "content": "Request only the fields you need with the fields parameter to reduce payload size and improve latency.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0070",
+    "title": "Batch operations",
+    "category": "API",
+    "content": "Submit multiple operations in a single batch request to reduce round trips. Each item in the batch returns its own status.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0071",
+    "title": "Localizing your workspace",
+    "category": "Account",
+    "content": "Set language and time zone under Settings, Preferences. These affect dates, numbers, and email content.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0072",
+    "title": "Accessibility features",
+    "category": "Account",
+    "content": "The platform supports keyboard navigation, screen readers, and high-contrast mode. Enable preferences under Settings, Accessibility.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0073",
+    "title": "Keyboard shortcuts",
+    "category": "Account",
+    "content": "Press the question mark key anywhere in the app to see available keyboard shortcuts for the current screen.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0074",
+    "title": "Contacting support",
+    "category": "Operations",
+    "content": "Reach support through the in-app help widget or by email. Include your workspace ID and any relevant request IDs to speed resolution.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0075",
+    "title": "Renaming your workspace",
+    "category": "Account",
+    "content": "Rename your workspace under Settings, General. The URL slug updates automatically; old links redirect for 30 days.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0076",
+    "title": "Understanding service-level agreements",
+    "category": "Operations",
+    "content": "Paid plans include an uptime SLA. Service credits apply if monthly uptime falls below the committed threshold.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0077",
+    "title": "Migrating between regions",
+    "category": "Operations",
+    "content": "Region migration is handled by support. Plan for a brief read-only window while data is copied and verified.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0078",
+    "title": "Configuring IP allowlists",
+    "category": "Authentication",
+    "content": "Restrict access to specific IP ranges under Settings, Security, Network. Requests from other addresses are blocked.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0079",
+    "title": "Managing API key scopes",
+    "category": "Developer",
+    "content": "Each key can be scoped to specific operations. Use narrow scopes for production keys to limit blast radius.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0080",
+    "title": "Streaming responses",
+    "category": "API",
+    "content": "Some endpoints support streaming. Set the stream flag to receive partial results as they are produced.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0081",
+    "title": "Handling large file uploads",
+    "category": "Data",
+    "content": "For files over 100MB, use the multipart upload flow. Each part uploads independently and is assembled server-side.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0082",
+    "title": "Custom roles and granular permissions",
+    "category": "Account",
+    "content": "Enterprise plans can define custom roles with granular permissions beyond the standard set.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0083",
+    "title": "Audit log export",
+    "category": "Operations",
+    "content": "Export audit logs for a date range under Settings, Security, Audit. Exports are provided as a downloadable file.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0084",
+    "title": "Deployment concurrency limits",
+    "category": "Deployments",
+    "content": "Concurrent deployments are limited per plan. Additional deployments queue until a slot is free.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0085",
+    "title": "Configuring notification webhooks",
+    "category": "Integrations",
+    "content": "Send platform events to your own services with webhooks. Verify payloads using the signing secret provided.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0086",
+    "title": "Resetting a team member's access",
+    "category": "Account",
+    "content": "Admins can reset a member's sessions and require re-authentication from Settings, Team, member actions.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0087",
+    "title": "Usage-based plan recommendations",
+    "category": "Billing",
+    "content": "The platform suggests a plan based on your trailing usage. Review recommendations under Settings, Billing, Plan.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0088",
+    "title": "Sandbox data reset schedule",
+    "category": "Developer",
+    "content": "Sandbox environments reset every Sunday. Do not store anything you need to keep in the sandbox.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0089",
+    "title": "Understanding cold starts",
+    "category": "Deployments",
+    "content": "Idle deployments may scale to zero and incur a brief cold start on the next request. Keep a minimum instance to avoid this.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0090",
+    "title": "Configuring retry policies",
+    "category": "API",
+    "content": "Define client-side retry policies that respect Retry-After and cap total attempts to avoid overloading the service.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0091",
+    "title": "Tagging resources for organization",
+    "category": "Account",
+    "content": "Apply tags to resources for filtering and cost attribution. Tags are key-value pairs visible across the dashboard.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0092",
+    "title": "Exporting usage data",
+    "category": "Data",
+    "content": "Download usage data as CSV under the Usage dashboard for your own analysis or chargeback reporting.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0093",
+    "title": "Setting up a staging workspace",
+    "category": "Developer",
+    "content": "Create a separate staging workspace to mirror production. Use it to validate changes before promoting them.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0094",
+    "title": "Managing concurrent sessions per user",
+    "category": "Authentication",
+    "content": "Limit how many simultaneous sessions a user may hold under Settings, Security. Older sessions are evicted first.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0095",
+    "title": "Configuring webhooks for billing events",
+    "category": "Billing",
+    "content": "Receive events when invoices are issued or payments fail. Add a billing webhook under Settings, Billing, Webhooks.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0096",
+    "title": "Understanding proration on plan changes",
+    "category": "Billing",
+    "content": "When you change plans mid-cycle, charges are prorated based on days remaining. The next invoice reflects the adjustment.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0097",
+    "title": "Currency and regional pricing",
+    "category": "Billing",
+    "content": "Prices are charged in your account currency set at signup. Currency cannot be changed without contacting support.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0098",
+    "title": "Pausing your subscription",
+    "category": "Billing",
+    "content": "Some plans allow pausing for up to three months. Paused workspaces are read-only and not billed for usage.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0099",
+    "title": "Reactivating a canceled subscription",
+    "category": "Billing",
+    "content": "Reactivate within 30 days to restore your data and settings. After 30 days, data may be purged.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0100",
+    "title": "Managing multiple workspaces under one account",
+    "category": "Account",
+    "content": "Switch between workspaces from the top navigation. Billing and members are managed per workspace.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0101",
+    "title": "Configuring default deployment region",
+    "category": "Deployments",
+    "content": "Set a default region for new deployments under Settings, Deployments. Individual deployments can override it.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0102",
+    "title": "Canary deployments",
+    "category": "Deployments",
+    "content": "Route a small percentage of traffic to a new version to validate it before a full rollout.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0103",
+    "title": "Deployment build cache",
+    "category": "Deployments",
+    "content": "Builds reuse cached layers to speed up rollouts. Clear the cache from the deployment menu if you suspect stale artifacts.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0104",
+    "title": "Custom build commands",
+    "category": "Deployments",
+    "content": "Override the default build command in the deployment Configuration tab for non-standard project layouts.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0105",
+    "title": "Connecting a git repository",
+    "category": "Developer",
+    "content": "Link a repository to enable automatic deployments on push. Authorize the git provider under Integrations.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0106",
+    "title": "Preview deployments for pull requests",
+    "category": "Developer",
+    "content": "Each pull request can get an isolated preview deployment. Enable this under the deployment's Git settings.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0107",
+    "title": "Environment-specific configuration",
+    "category": "Developer",
+    "content": "Maintain separate variables for staging and production. Promote configuration between environments with one click.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0108",
+    "title": "Debugging with request IDs",
+    "category": "Developer",
+    "content": "Every API response includes a request ID. Provide it to support to trace a specific request end to end.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0109",
+    "title": "Throttling versus quota: the difference",
+    "category": "API",
+    "content": "Throttling limits requests per second; quota limits total calls per cycle. You can hit either independently.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0110",
+    "title": "Long-running operations and polling",
+    "category": "API",
+    "content": "Some operations return a job ID. Poll the job status endpoint until it reports completed or failed.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0111",
+    "title": "Field-level encryption",
+    "category": "Data",
+    "content": "Sensitive fields can be encrypted individually with your own key. Configure under Settings, Security, Encryption.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0112",
+    "title": "Data import validation errors",
+    "category": "Data",
+    "content": "Imports fail rows that do not match field types. Download the error report to see which rows need fixing.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0113",
+    "title": "Scheduling automatic backups",
+    "category": "Data",
+    "content": "Enable daily automatic backups under Settings, Data, Backups. Retain backups for up to 35 days.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0114",
+    "title": "Restoring from a backup",
+    "category": "Data",
+    "content": "Restore a backup from Settings, Data, Backups. Restoring overwrites current data, so export first if unsure.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0115",
+    "title": "Sharing dashboards externally",
+    "category": "Operations",
+    "content": "Generate a read-only public link for a dashboard. Disable the link anytime to revoke access.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0116",
+    "title": "Setting up anomaly detection",
+    "category": "Operations",
+    "content": "Enable anomaly alerts to be notified when usage deviates sharply from normal patterns.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0117",
+    "title": "Configuring quiet hours for alerts",
+    "category": "Operations",
+    "content": "Suppress non-critical alerts during defined quiet hours to reduce noise outside working time.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0118",
+    "title": "Team activity feed",
+    "category": "Account",
+    "content": "See recent actions by team members in the Activity feed. Filter by member or action type.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0119",
+    "title": "Enforcing SSO for all members",
+    "category": "Authentication",
+    "content": "Once SSO is enforced, password login is disabled and all members must authenticate through your IdP.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0120",
+    "title": "Service account credentials",
+    "category": "Developer",
+    "content": "Create non-human service accounts for automated systems. Scope and rotate their credentials regularly.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0121",
+    "title": "Rotating credentials on a schedule",
+    "category": "Authentication",
+    "content": "Set credentials to expire and rotate automatically. The platform warns before expiry so you can update clients.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0122",
+    "title": "Understanding eventual consistency",
+    "category": "API",
+    "content": "Some read endpoints are eventually consistent. A write may take a moment to appear in subsequent reads.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0123",
+    "title": "Bulk deleting records safely",
+    "category": "Data",
+    "content": "Bulk deletes move records to a recoverable state for 30 days. Confirm the count before proceeding.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0124",
+    "title": "Configuring data masking for non-production",
+    "category": "Data",
+    "content": "Mask sensitive fields automatically in staging so test data does not expose real values.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0125",
+    "title": "Custom email templates for notifications",
+    "category": "Account",
+    "content": "Customize the look of outbound notification emails under Settings, Branding.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0126",
+    "title": "White-labeling the dashboard",
+    "category": "Account",
+    "content": "Enterprise plans can apply custom logos and colors to the dashboard for their teams.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0127",
+    "title": "Configuring retention per data type",
+    "category": "Data",
+    "content": "Set different retention periods for different record types to meet compliance needs.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0128",
+    "title": "Understanding deployment regions and latency",
+    "category": "Deployments",
+    "content": "Deploy close to your users to reduce latency. The platform reports round-trip times per region.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0129",
+    "title": "Handling partial batch failures",
+    "category": "API",
+    "content": "In a batch request, individual items can fail without failing the whole batch. Inspect each item's status.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0130",
+    "title": "Setting up usage-based alerts",
+    "category": "Operations",
+    "content": "Trigger alerts at percentage thresholds of your quota so you can act before hitting limits.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0131",
+    "title": "Connecting identity providers",
+    "category": "Authentication",
+    "content": "Supported identity providers include common SAML and OIDC services. Configure under Settings, Security.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0132",
+    "title": "Managing access for contractors",
+    "category": "Account",
+    "content": "Grant time-boxed access to external contractors with auto-expiring invitations and limited roles.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0133",
+    "title": "Exporting audit logs to external SIEM",
+    "category": "Operations",
+    "content": "Stream audit events to your security tooling via the audit webhook or scheduled export.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0134",
+    "title": "Understanding build timeouts",
+    "category": "Deployments",
+    "content": "Builds that exceed the time limit are canceled. Optimize dependencies or split the build to stay within limits.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0135",
+    "title": "Configuring health check thresholds",
+    "category": "Deployments",
+    "content": "Tune how many failed probes trigger a restart to balance resilience against flapping.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0136",
+    "title": "Using feature flags",
+    "category": "Developer",
+    "content": "Roll out features gradually with flags. Toggle them per environment without redeploying.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0137",
+    "title": "Managing large team directories",
+    "category": "Account",
+    "content": "Sync your team directory from your identity provider so membership stays current automatically.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0138",
+    "title": "Configuring spend by project",
+    "category": "Billing",
+    "content": "Attribute spend to projects with tags, then view cost breakdowns by project on the billing dashboard.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0139",
+    "title": "Understanding throttling headers",
+    "category": "API",
+    "content": "Throttled responses include headers showing your limit, remaining calls, and reset time. Use them to pace requests.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0140",
+    "title": "Setting up disaster recovery",
+    "category": "Operations",
+    "content": "Configure cross-region backups and a recovery plan. Test recovery periodically to validate it.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0141",
+    "title": "Migrating from another provider",
+    "category": "Data",
+    "content": "Use the import tools and migration guide to move data from another platform. Support can assist large migrations.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0142",
+    "title": "Configuring per-environment quotas",
+    "category": "Billing",
+    "content": "Set separate quotas for staging and production so test usage does not consume production budget.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0143",
+    "title": "Understanding API deprecation policy",
+    "category": "Developer",
+    "content": "Deprecated API versions are supported for at least 12 months. Migration guides are published in advance.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0144",
+    "title": "Managing notification channels",
+    "category": "Operations",
+    "content": "Route different alert types to different channels such as email, webhook, or chat integrations.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0145",
+    "title": "Configuring custom retry budgets",
+    "category": "API",
+    "content": "Set a retry budget to cap how much retrying your client does in aggregate, protecting the service during incidents.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0146",
+    "title": "Handling timezone-sensitive scheduling",
+    "category": "Operations",
+    "content": "Scheduled jobs run in your workspace timezone. Account for daylight saving changes in recurring schedules.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0147",
+    "title": "Reviewing permission changes",
+    "category": "Account",
+    "content": "All permission changes are logged. Review who changed what and when in the audit trail.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0148",
+    "title": "Setting up budget approvals",
+    "category": "Billing",
+    "content": "Require approval before spend increases above a threshold to keep costs under control.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0149",
+    "title": "Understanding cold storage for archives",
+    "category": "Data",
+    "content": "Archived data moves to lower-cost cold storage. Retrieval from cold storage may take longer than active data.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0150",
+    "title": "Configuring rate limits per API key",
+    "category": "API",
+    "content": "Assign different rate tiers to different keys so background jobs do not starve interactive traffic.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0151",
+    "title": "Managing deployment secrets rotation",
+    "category": "Deployments",
+    "content": "Rotate deployment secrets without downtime by updating the protected variable and triggering a rollout.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0152",
+    "title": "Using the status page API",
+    "category": "Operations",
+    "content": "Pull current and historical status programmatically to surface platform health inside your own tools.",
+    "type": "faq"
+  },
+  {
+    "id": "DOC-0153",
+    "title": "Configuring SSO group mapping",
+    "category": "Authentication",
+    "content": "Map identity provider groups to platform roles so access follows your directory automatically.",
+    "type": "faq"
+  }
+]

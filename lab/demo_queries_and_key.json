@@ -1,0 +1,65 @@
+{
+  "queries": {
+    "Q1": "I can't log in after changing my password",
+    "Q2": "Why is my bill higher than expected this month",
+    "Q3": "My deployment keeps failing",
+    "Q4": "How do I get my data out of the platform",
+    "Q5": "I keep getting rate limited with 429 errors"
+  },
+  "answer_key": {
+    "Q1": {
+      "correct": [
+        "DOC-0001"
+      ],
+      "nearmiss": [
+        "DOC-0002",
+        "DOC-0003",
+        "DOC-0004",
+        "DOC-0005"
+      ]
+    },
+    "Q2": {
+      "correct": [
+        "DOC-0006"
+      ],
+      "nearmiss": [
+        "DOC-0007",
+        "DOC-0008",
+        "DOC-0009",
+        "DOC-0010"
+      ]
+    },
+    "Q3": {
+      "correct": [
+        "DOC-0011"
+      ],
+      "nearmiss": [
+        "DOC-0012",
+        "DOC-0013",
+        "DOC-0014",
+        "DOC-0015"
+      ]
+    },
+    "Q4": {
+      "correct": [
+        "DOC-0016"
+      ],
+      "nearmiss": [
+        "DOC-0017",
+        "DOC-0018",
+        "DOC-0019"
+      ]
+    },
+    "Q5": {
+      "correct": [
+        "DOC-0020"
+      ],
+      "nearmiss": [
+        "DOC-0021",
+        "DOC-0022",
+        "DOC-0023",
+        "DOC-0024"
+      ]
+    }
+  }
+}

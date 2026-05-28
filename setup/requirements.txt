@@ -1,0 +1,23 @@
+# ============================================================
+# Cohere Lab 2 - Python package prerequisites
+# Install with: python -m pip install -r requirements.txt
+# ============================================================
+
+# --- Cohere calls (Embed + Rerank via Azure endpoint) ---
+cohere>=5.13.0           # Cohere SDK pointed at the Azure serverless endpoint
+requests>=2.31.0         # raw REST alternative to the SDK
+
+# --- config ---
+python-dotenv>=1.0.0     # load endpoints/keys from .env
+
+# --- vector search (in-memory, no external service) ---
+numpy>=1.26.0
+faiss-cpu>=1.8.0         # in-memory vector index for the lab
+
+# --- notebooks ---
+jupyter>=1.0.0
+ipykernel>=6.29.0
+
+# --- Lab 1 only (chat / e2e Foundry, NOT needed for embed+rerank) ---
+azure-ai-projects>=2.0.0b4
+azure-identity>=1.16.0

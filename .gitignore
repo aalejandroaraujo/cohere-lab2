@@ -1,0 +1,32 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+
+# Environment and secrets
+.env
+*.env.local
+
+# Generated artifacts
+doc_vectors.npy
+*.npy
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Scratch and test data (not part of lab deliverable)
+sandbox/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
